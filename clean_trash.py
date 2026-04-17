@@ -2,8 +2,8 @@ import os
 import argparse
 import time
 parser=argparse.ArgumentParser( description = "checking files")
-parser.add_argument("trash_folder", type = str, help = "назови папку")
-parser.add_argument("--age_thr", type = int, help = "назови время")
+parser.add_argument("trash_folder", type = str, help = "name folder")
+parser.add_argument("--age_thr", type = int, help = "name interval")
 args = parser.parse_args()
 with open("../clean_trash.log", "a") as log_file:
     while True:
