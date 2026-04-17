@@ -8,13 +8,11 @@ def scan_gitignore(dir_name):
         for name in file:
             name = name.strip()
             if "*" in name:
-                formats.append(name[2:]) #убрала точку и звездочку
             else:
                 file_name = os.path.basename(name)
                 filenames.append(file_name)
 #check ignored.py
 parser = argparse.ArgumentParser( description = "checking files")
-parser.add_argument("dir_name", type = str, help = "назови директорий")
 args = parser.parse_args()
 scan_gitignore(args.dir_name)
 for root, dirs, files  in os.walk(args.dir_name):
